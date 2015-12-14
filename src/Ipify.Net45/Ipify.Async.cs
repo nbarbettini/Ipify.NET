@@ -4,13 +4,10 @@
 */
 
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Ipify
 {
-    /// <summary>
-    /// Static utility class exposing methods to facilitate resolving a client's
-    /// public IP address on the Internet by querying the service at ipify.org.
-    /// </summary>
     public static partial class Ipify
     {
         /// <summary>
@@ -24,17 +21,17 @@ namespace Ipify
         /// A string containing the IP address, or an empty string if an error is
         /// encountered.
         /// </returns>
-        public static string GetPublicAddress(bool useHttps = false)
+        public static Task<string> GetPublicAddressAsync(bool useHttps = false)
         {
             var endpoint = useHttps ? "https://api.ipify.org" : "http://api.ipify.org";
             WebClient client = new WebClient();
             try
             {
-                return client.DownloadString(endpoint);
+                return client.DownloadStringTaskAsync(endpoint);
             }
             catch
             {
-                return string.Empty;
+                return Task.FromResult(string.Empty);
             }
         }
 
@@ -47,13 +44,13 @@ namespace Ipify
         /// <b>false</b> if omitted).
         /// </param>
         /// <returns>
-        /// An instance of <see cref="IPAddress" />. If an error occures, then
+        /// An instance of <see cref="IPAddress" />. If an error occurs, then
         /// <see cref="IPAddress.None" /> is returned.
         /// encountered.
         /// </returns>
-        public static IPAddress GetPublicIPAddress(bool useHttps = false)
+        public static async Task<IPAddress> GetPublicIPAddressAsync(bool useHttps = false)
         {
-            string address = GetPublicAddress(useHttps);
+            string address = await GetPublicAddressAsync(useHttps).ConfigureAwait(false);
             IPAddress ipAddress;
             if (!IPAddress.TryParse(address, out ipAddress))
             {

@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify", "Ipify\Ipify.csproj", "{3A76ED6C-03A7-4432-9187-CFF0CD97D53E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify.Tests", "Ipify.Tests\Ipify.Tests.csproj", "{A5A12BA3-3E1D-4B2D-BDCC-930A29836244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify.Net45", "Ipify.Net45\Ipify.Net45.csproj", "{150BDBD1-073B-4A68-AF58-679E1095CE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify.Net45.Tests", "Ipify.Net45.Tests\Ipify.Net45.Tests.csproj", "{011208DC-48C6-4FF2-BD5D-402E1C5B66BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A5A12BA3-3E1D-4B2D-BDCC-930A29836244}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5A12BA3-3E1D-4B2D-BDCC-930A29836244}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5A12BA3-3E1D-4B2D-BDCC-930A29836244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{150BDBD1-073B-4A68-AF58-679E1095CE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{150BDBD1-073B-4A68-AF58-679E1095CE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{150BDBD1-073B-4A68-AF58-679E1095CE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{150BDBD1-073B-4A68-AF58-679E1095CE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011208DC-48C6-4FF2-BD5D-402E1C5B66BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011208DC-48C6-4FF2-BD5D-402E1C5B66BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011208DC-48C6-4FF2-BD5D-402E1C5B66BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011208DC-48C6-4FF2-BD5D-402E1C5B66BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
